@@ -316,7 +316,7 @@
                              "description": "Amazon S3 Request node",
                              "link": "https://www.ibm.com/docs/en/app-connect/12.0?topic=nodes-amazon-s3-request-node",
                              "type": "web"
-                        }
+                        },
 						{
                             "title": "IBM Documentation link to ",
                             "description": "Testing your message flow by using the Flow exerciser",
