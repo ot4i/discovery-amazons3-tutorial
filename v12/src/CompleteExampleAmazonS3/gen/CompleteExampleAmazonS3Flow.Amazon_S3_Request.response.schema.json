@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "items": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "displayOrder": 1,
+        "title": "Bucket name",
+        "type": "string"
+      },
+      "CreationDate": {
+        "displayOrder": 2,
+        "title": "Creation date",
+        "type": "string",
+        "format": "date-time"
+      },
+      "Acl": {
+        "displayOrder": 3,
+        "title": "ACL",
+        "type": "object",
+        "properties": {
+          "AccessControlPolicy": {
+            "title": "Access control policy",
+            "type": "object",
+            "properties": {
+              "Owner": {
+                "displayOrder": 1,
+                "title": "Owner",
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "displayOrder": 1,
+                    "title": "ID",
+                    "type": "string"
+                  },
+                  "DisplayName": {
+                    "displayOrder": 2,
+                    "title": "Owner display name",
+                    "type": "string"
+                  }
+                }
+              },
+              "Grants": {
+                "displayOrder": 2,
+                "title": "Grant",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Grantee": {
+                      "displayOrder": 1,
+                      "title": "Grantee",
+                      "type": "object",
+                      "properties": {
+                        "DisplayName": {
+                          "displayOrder": 1,
+                          "title": "Display name",
+                          "type": "string"
+                        },
+                        "EmailAddress": {
+                          "displayOrder": 2,
+                          "title": "Email address",
+                          "type": "string"
+                        },
+                        "ID": {
+                          "displayOrder": 3,
+                          "title": "ID",
+                          "type": "string"
+                        },
+                        "Type": {
+                          "displayOrder": 4,
+                          "title": "Type",
+                          "display": {
+                            "enum": [
+                              "CanonicalUser",
+                              "AmazonCustomerByEmail",
+                              "Group"
+                            ]
+                          },
+                          "type": "string"
+                        },
+                        "URI": {
+                          "displayOrder": 5,
+                          "title": "URI",
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "Permission": {
+                      "displayOrder": 2,
+                      "title": "Permission",
+                      "display": {
+                        "enum": [
+                          "FULL_CONTROL",
+                          "WRITE",
+                          "WRITE_ACP",
+                          "READ",
+                          "READ_ACP"
+                        ]
+                      },
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "UniqueId": {
+        "displayOrder": 4,
+        "title": "Unique ID",
+        "type": "string"
+      },
+      "TagSet": {
+        "displayOrder": 1,
+        "title": "Tag set",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "Key": {
+              "displayOrder": 1,
+              "title": "Key",
+              "type": "string"
+            },
+            "Value": {
+              "displayOrder": 2,
+              "title": "Value",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "nextPageToken": {
+        "displayOrder": 6,
+        "title": "Next page token",
+        "type": "string"
+      }
+    },
+    "title": "bucketcollection"
+  },
+  "type": "array",
+  "title": "bucketcollection"
+}

@@ -7,7 +7,11 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/CompleteExampleAmazonS3/icons/full/obj16/CompleteExampleAmazonS3Flow.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/CompleteExampleAmazonS3/icons/full/obj30/CompleteExampleAmazonS3Flow.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmApplicationConnectorRequest_amazons3.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="422,89" applicationConnectorType="amazons3">
+      <nodes xmi:type="ComIbmApplicationConnectorRequest_amazons3.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="422,89" applicationConnectorType="amazons3" action="RETRIEVEALL" businessObject="bucketcollection" displayName="Retrieve all buckets" policyUrl="{CompletePolicyProjectAmazonS3}:AmazonS31">
+        <filter>
+          <queryProperties limit="3" allowTruncation="true" paginationType="TOKEN"/>
+          <propagateBehaviour allowEmptyOutput="false"/>
+        </filter>
         <translation xmi:type="utility:ConstantString" string="Amazon S3 Request"/>
       </nodes>
       <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="420,33">
